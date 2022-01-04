@@ -15,9 +15,6 @@ jobs:
     - checkout
     - run: node --version
     - run: npm install
-    - run:
-        name: Generate common-vendor.json
-        command: node ./bin/generate-common-vendor.js
     - run: mkdir -p .tmp
     - persist_to_workspace:
         root: '~'
