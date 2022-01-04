@@ -30,7 +30,8 @@ jobs:
           name: Run tests
           command: npm test
   release:
-    executor: node/default
+    docker:
+      - image: cimg/node:16.10
     steps:
       - run: npx semantic-release
 
